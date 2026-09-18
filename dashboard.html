@@ -1,0 +1,337 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+    <title>Student Dashboard - UBC</title> 
+    <link rel="stylesheet" href="css/style.css"> 
+</head> 
+ 
+<body> 
+ 
+<header> 
+    <nav> 
+ 
+        <img src="images/logo/logo.png" alt="UBC Logo"> 
+ 
+        <h2>THE UNIVERSITY OF BRITISH COLUMBIA</h2> 
+ 
+        <div> 
+            <a href="index.html">Home</a> 
+            <a href="about.html">About UBC</a> 
+            <a href="campuses.html">Our Campuses</a> 
+            <a href="faculties.html">Faculties</a> 
+            <a href="admissions.html">Admissions</a> 
+            <a href="#" class="login" onclick="logout()">Logout</a> 
+        </div> 
+ 
+    </nav> 
+</header> 
+ 
+ 
+<main class="dashboard-page"> 
+ 
+ 
+    <section class="dashboard-welcome"> 
+ 
+        <div> 
+            <h1> 
+                Welcome, <span id="welcomeName"></span>! 
+            </h1> 
+ 
+            <p> 
+                Welcome to your UBC student dashboard. 
+            </p> 
+        </div> 
+ 
+        <div class="student-id-box"> 
+            Student ID: 
+            <strong id="studentId"></strong> 
+        </div> 
+ 
+    </section> 
+ 
+ 
+    <section class="dashboard-content"> 
+ 
+ 
+        <div class="dashboard-card profile-card"> 
+ 
+            <h2>Student Information</h2> 
+ 
+            <div class="profile-details"> 
+ 
+                <div> 
+                    <span>Full Name</span> 
+                    <strong id="fullName"></strong> 
+                </div> 
+ 
+                <div> 
+                    <span>Student ID</span> 
+                    <strong id="profileStudentId"></strong> 
+                </div> 
+ 
+                <div> 
+                    <span>Email</span> 
+                    <strong id="profileEmail"></strong> 
+                </div> 
+ 
+                <div> 
+                    <span>Phone</span> 
+                    <strong id="profilePhone"></strong> 
+                </div> 
+ 
+                <div> 
+                    <span>Date of Birth</span> 
+                    <strong id="profileDob"></strong> 
+                </div> 
+ 
+                <div> 
+                    <span>Gender</span> 
+                    <strong id="profileGender"></strong> 
+                </div> 
+ 
+                <div> 
+                    <span>Program</span> 
+                    <strong id="profileProgram"></strong> 
+                </div> 
+ 
+                <div> 
+                    <span>Campus</span> 
+                    <strong id="profileCampus"></strong> 
+                </div> 
+ 
+                <div class="address-info"> 
+                    <span>Address</span> 
+                    <strong id="profileAddress"></strong> 
+                </div> 
+ 
+            </div> 
+ 
+        </div> 
+ 
+ 
+        <div class="dashboard-side"> 
+ 
+ 
+            <div class="dashboard-card"> 
+ 
+                <h2>Academic Information</h2> 
+ 
+                <div class="academic-item"> 
+ 
+                    <span>Program</span> 
+                    <strong id="academicProgram"></strong> 
+ 
+                </div> 
+ 
+ 
+                <div class="academic-item"> 
+ 
+                    <span>Campus</span> 
+                    <strong id="academicCampus"></strong> 
+ 
+                </div> 
+ 
+ 
+                <div class="academic-item"> 
+ 
+                    <span>Student Status</span> 
+                    <strong>Active Student</strong> 
+ 
+                </div> 
+ 
+            </div> 
+ 
+ 
+            <div class="dashboard-card"> 
+ 
+                <h2>Quick Links</h2> 
+ 
+                <div class="quick-links"> 
+ 
+                    <a href="index.html">University Home</a> 
+ 
+                    <a href="about.html">About UBC</a> 
+ 
+                    <a href="campuses.html">Our Campuses</a> 
+ 
+                    <a href="faculties.html">Faculties</a> 
+ 
+                    <a href="admissions.html">Admissions</a> 
+ 
+                </div> 
+ 
+            </div> 
+ 
+ 
+        </div> 
+ 
+    </section> 
+ 
+ 
+    <section class="dashboard-message"> 
+ 
+        <h2>Student Portal</h2> 
+ 
+        <p> 
+            Your registration information is displayed here based on 
+            the information you provided during registration. 
+        </p> 
+ 
+    </section> 
+ 
+ 
+</main> 
+ 
+ 
+<footer> 
+ 
+    <div class="footer-content"> 
+ 
+        <div class="footer-about"> 
+ 
+            <h3> 
+                THE UNIVERSITY OF<br> 
+                BRITISH COLUMBIA 
+            </h3> 
+ 
+            <p> 
+                A global centre for teaching, learning and research, 
+                inspiring people to shape a better world. 
+            </p> 
+ 
+        </div> 
+ 
+ 
+        <div class="footer-links"> 
+ 
+            <h3>QUICK LINKS</h3> 
+ 
+            <a href="index.html">Home</a> 
+            <a href="about.html">About UBC</a> 
+            <a href="campuses.html">Our Campuses</a> 
+            <a href="faculties.html">Faculties</a> 
+            <a href="admissions.html">Admissions</a> 
+ 
+        </div> 
+ 
+ 
+        <div class="footer-campus"> 
+ 
+            <h3>OUR CAMPUSES</h3> 
+ 
+            <p> 
+                <strong>Vancouver Campus</strong><br> 
+                2329 West Mall<br> 
+                Vancouver, BC Canada 
+            </p> 
+ 
+            <p> 
+                <strong>Okanagan Campus</strong><br> 
+                3333 University Way<br> 
+                Kelowna, BC Canada 
+            </p> 
+ 
+        </div> 
+ 
+    </div> 
+ 
+ 
+    <div class="footer-bottom"> 
+ 
+        <p> 
+            ©️ 2024 The University of British Columbia. 
+            All Rights Reserved. 
+        </p> 
+ 
+        <p> 
+            Privacy &nbsp; | &nbsp; 
+            Terms of Use &nbsp; | &nbsp; 
+            Accessibility &nbsp; | &nbsp; 
+            Contact Us 
+        </p> 
+ 
+    </div> 
+ 
+</footer> 
+ 
+ 
+<script> 
+ 
+const loggedIn = localStorage.getItem("isLoggedIn"); 
+const savedStudent = localStorage.getItem("studentData"); 
+ 
+ 
+if (loggedIn !== "true" || !savedStudent) { 
+ 
+    window.location.href = "login.html"; 
+ 
+} 
+ 
+ 
+const student = JSON.parse(savedStudent); 
+ 
+ 
+document.getElementById("welcomeName").textContent = 
+    student.firstName; 
+ 
+ 
+document.getElementById("studentId").textContent = 
+    student.studentId; 
+ 
+ 
+document.getElementById("fullName").textContent = 
+    student.firstName + " " + student.lastName; 
+ 
+ 
+document.getElementById("profileStudentId").textContent = 
+    student.studentId; 
+ 
+ 
+document.getElementById("profileEmail").textContent = 
+    student.email; 
+ 
+ 
+document.getElementById("profilePhone").textContent = 
+    student.phone; 
+ 
+ 
+document.getElementById("profileDob").textContent = 
+    student.dob; 
+ 
+ 
+document.getElementById("profileGender").textContent = 
+    student.gender; 
+ 
+ 
+document.getElementById("profileProgram").textContent = 
+    student.program; 
+ 
+ 
+document.getElementById("profileCampus").textContent = 
+    student.campus; 
+ 
+ 
+document.getElementById("profileAddress").textContent = 
+    student.address; 
+ 
+ 
+document.getElementById("academicProgram").textContent = 
+    student.program; 
+ 
+ 
+document.getElementById("academicCampus").textContent = 
+    student.campus; 
+ 
+ 
+function logout() { 
+ 
+    localStorage.removeItem("isLoggedIn"); 
+ 
+    window.location.href = "login.html"; 
+ 
+} 
+ 
+</script> 
+ 
+</body> 
+</html>
