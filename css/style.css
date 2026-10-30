@@ -1324,3 +1324,287 @@ footer{padding:35px 20px 20px}
 img{max-width:100%}
 
 
+
+
+/* ===== TABLET RESPONSIVE ===== */
+
+@media (max-width: 900px) {
+
+    #about,
+    .about-page,
+    .campus-detail,
+    .mission-vision {
+        flex-direction: column;
+    }
+
+    .about-image,
+    .about-text,
+    .about-page-image,
+    .about-page-text,
+    .campus-detail-image,
+    .campus-detail-text,
+    .mission,
+    .vision {
+        width: 100%;
+    }
+
+    .why-container,
+    .facility-container,
+    .requirements-container,
+    .process-container {
+        flex-wrap: wrap;
+    }
+
+    .why-card,
+    .facility-card,
+    .requirement-card,
+    .process-card {
+        width: calc(50% - 13px);
+    }
+
+    .faculty-card {
+        width: calc(50% - 15px);
+    }
+
+    .admission-option-container {
+        flex-direction: column;
+    }
+
+    .admission-option {
+        width: 100%;
+    }
+
+    .footer-content {
+        flex-wrap: wrap;
+    }
+
+    .footer-about,
+    .footer-links,
+    .footer-campus {
+        width: calc(50% - 25px);
+    }
+
+    .about-page,
+    .campus-detail {
+        padding: 40px 30px;
+    }
+
+    .who-we-are,
+    .student-life,
+    .faculty-experience,
+    .admission-info {
+        padding: 45px 30px;
+    }
+
+    .faculty-intro,
+    .admission-intro {
+        padding: 40px 30px;
+    }
+
+}
+
+
+/* ===== MOBILE RESPONSIVE ===== */
+
+@media (max-width: 600px) {
+
+    nav {
+        justify-content: center;
+        padding: 12px;
+    }
+
+    nav img {
+        width: 65px;
+        height: 65px;
+    }
+
+    nav h2 {
+        font-size: 17px;
+        margin-left: 10px;
+    }
+
+    nav div {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    nav a {
+        margin: 0;
+        font-size: 14px;
+    }
+
+    .hero {
+        height: 350px;
+    }
+
+    .hero-text {
+        top: auto;
+        bottom: 30px;
+        left: 20px;
+        right: 20px;
+    }
+
+    .campus-hero,
+    .faculty-hero,
+    .admission-hero {
+        height: 320px;
+    }
+
+    .campus-hero-text,
+    .faculty-hero-text,
+    .admission-hero-text {
+        top: auto;
+        bottom: 25px;
+        left: 20px;
+        right: 20px;
+    }
+
+    .campus-hero-text h1,
+    .faculty-hero-text h1,
+    .admission-hero-text h1 {
+        font-size: 30px;
+    }
+
+    .campus-hero-text p,
+    .faculty-hero-text p,
+    .admission-hero-text p {
+        font-size: 16px;
+    }
+
+    #campuses,
+    .campus-facilities,
+    .admission-requirements,
+    .application-process {
+        padding: 30px 20px;
+    }
+
+    #campuses h2,
+    .about-text h2,
+    .campus-facilities h2 {
+        font-size: 27px;
+    }
+
+    .campus-container,
+    .footer-content {
+        flex-direction: column;
+    }
+
+    .campus-card,
+    .why-card,
+    .facility-card,
+    .requirement-card,
+    .process-card,
+    .faculty-card {
+        width: 100%;
+    }
+
+    #about,
+    .about-page,
+    .campus-detail {
+        padding: 30px 20px;
+        gap: 25px;
+    }
+
+    .mission-vision {
+        padding: 30px 20px;
+        gap: 20px;
+    }
+
+    .mission,
+    .vision {
+        padding: 25px 20px;
+    }
+
+    .why-container,
+    .facility-container,
+    .requirements-container,
+    .process-container,
+    .faculty-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .who-we-are,
+    .student-life,
+    .faculty-experience,
+    .admission-info {
+        padding: 40px 20px;
+    }
+
+    .about-ending,
+    .campus-ending,
+    .faculty-ending,
+    .admission-ending {
+        padding: 35px 20px;
+    }
+
+    .faculty-intro,
+    .admission-intro {
+        padding: 35px 20px;
+    }
+
+    .student-life h2,
+    .faculty-experience h2,
+    .admission-info h2 {
+        font-size: 27px;
+    }
+
+    footer {
+        padding: 35px 20px 20px;
+    }
+
+    .footer-about,
+    .footer-links,
+    .footer-campus {
+        width: 100%;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+    }
+
+    .register-page,
+    .login-page {
+        padding: 35px 15px;
+        min-height: auto;
+    }
+
+    .register-box,
+    .login-box {
+        padding: 30px 20px;
+    }
+
+    .dashboard-welcome {
+        padding: 30px 20px;
+    }
+
+    .dashboard-welcome h1 {
+        font-size: 27px;
+    }
+
+    .dashboard-card {
+        padding: 22px 18px;
+    }
+
+    .profile-details {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-details .address-info {
+        grid-column: 1;
+    }
+
+    .academic-item {
+        flex-wrap: wrap;
+    }
+
+    .dashboard-message {
+        margin: 0 15px;
+        padding: 25px 18px;
+    }
+
+}
