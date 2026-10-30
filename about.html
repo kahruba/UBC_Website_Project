@@ -1,14 +1,28 @@
-<!DOCTYPE html><html>
+<!DOCTYPE html>
+<html>
 <head>
     <title>About UBC</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<header>
-    <nav>
-        <img src="images/logo/logo.png" alt="logo">
+    <header> 
+    <nav class="site-nav">
+
+        <img src="images/logo/logo.png" alt="UBC Logo">
+
         <h2>THE UNIVERSITY OF BRITISH COLUMBIA</h2>
-        <div>
+
+        <button class="menu-toggle"
+                id="menuToggle"
+                aria-label="Toggle navigation"
+                aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <div class="nav-links" id="navLinks">
             <a href="index.html">Home</a>
             <a href="about.html">About UBC</a>
             <a href="campuses.html">Our Campuses</a>
@@ -16,6 +30,7 @@
             <a href="admissions.html">Admissions</a>
             <a href="login.html" class="login">Login</a>
         </div>
+
     </nav>
 </header>
 <main>
@@ -141,5 +156,18 @@
     <p>Privacy &nbsp; | &nbsp; Terms of Use &nbsp; | &nbsp; Accessibility &nbsp; | &nbsp; Contact Us</p>
 </div>
 </footer>
+<script>
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+
+if (menuToggle && navLinks) {
+    menuToggle.addEventListener("click", function () {
+        navLinks.classList.toggle("active");
+
+        const isOpen = navLinks.classList.contains("active");
+        menuToggle.setAttribute("aria-expanded", isOpen);
+    });
+}
+</script>
 </body>
 </html>

@@ -2,29 +2,35 @@
 <html> 
 <head> 
     <title>Student Dashboard - UBC</title> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css"> 
 </head> 
  
 <body> 
- 
-<header> 
-    <nav> 
- 
-        <img src="images/logo/logo.png" alt="UBC Logo"> 
- 
-        <h2>THE UNIVERSITY OF BRITISH COLUMBIA</h2> 
- 
-        <div> 
-            <a href="index.html">Home</a> 
-            <a href="about.html">About UBC</a> 
-            <a href="campuses.html">Our Campuses</a> 
-            <a href="faculties.html">Faculties</a> 
-            <a href="admissions.html">Admissions</a> 
-            <a href="#" class="login" onclick="logout()">Logout</a> 
-        </div> 
- 
-    </nav> 
-</header> 
+<header>
+    <nav class="site-nav">
+        <img src="images/logo/logo.png" alt="UBC Logo">
+        <h2>THE UNIVERSITY OF BRITISH COLUMBIA</h2>
+
+        <button class="menu-toggle"
+                id="menuToggle"
+                aria-label="Toggle navigation"
+                aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <div class="nav-links" id="navLinks">
+            <a href="index.html">Home</a>
+            <a href="about.html">About UBC</a>
+            <a href="campuses.html">Our Campuses</a>
+            <a href="faculties.html">Faculties</a>
+            <a href="admissions.html">Admissions</a>
+            <a href="#" class="login" onclick="logout(); return false;">Logout</a>
+        </div>
+    </nav>
+</header>
  
  
 <main class="dashboard-page"> 
@@ -255,83 +261,59 @@
 </footer> 
  
  
-<script> 
- 
-const loggedIn = localStorage.getItem("isLoggedIn"); 
-const savedStudent = localStorage.getItem("studentData"); 
- 
- 
-if (loggedIn !== "true" || !savedStudent) { 
- 
-    window.location.href = "login.html"; 
- 
-} 
- 
- 
-const student = JSON.parse(savedStudent); 
- 
- 
-document.getElementById("welcomeName").textContent = 
-    student.firstName; 
- 
- 
-document.getElementById("studentId").textContent = 
-    student.studentId; 
- 
- 
-document.getElementById("fullName").textContent = 
-    student.firstName + " " + student.lastName; 
- 
- 
-document.getElementById("profileStudentId").textContent = 
-    student.studentId; 
- 
- 
-document.getElementById("profileEmail").textContent = 
-    student.email; 
- 
- 
-document.getElementById("profilePhone").textContent = 
-    student.phone; 
- 
- 
-document.getElementById("profileDob").textContent = 
-    student.dob; 
- 
- 
-document.getElementById("profileGender").textContent = 
-    student.gender; 
- 
- 
-document.getElementById("profileProgram").textContent = 
-    student.program; 
- 
- 
-document.getElementById("profileCampus").textContent = 
-    student.campus; 
- 
- 
-document.getElementById("profileAddress").textContent = 
-    student.address; 
- 
- 
-document.getElementById("academicProgram").textContent = 
-    student.program; 
- 
- 
-document.getElementById("academicCampus").textContent = 
-    student.campus; 
- 
- 
-function logout() { 
- 
-    localStorage.removeItem("isLoggedIn"); 
- 
-    window.location.href = "login.html"; 
- 
-} 
- 
-</script> 
+<script>
+
+const loggedIn = localStorage.getItem("isLoggedIn");
+const savedStudent = localStorage.getItem("studentData");
+
+if (loggedIn !== "true" || !savedStudent) {
+
+    window.location.href = "login.html";
+
+} else {
+
+    const student = JSON.parse(savedStudent);
+
+    document.getElementById("welcomeName").textContent = student.firstName;
+    document.getElementById("studentId").textContent = student.studentId;
+    document.getElementById("fullName").textContent = student.firstName + " " + student.lastName;
+    document.getElementById("profileStudentId").textContent = student.studentId;
+    document.getElementById("profileEmail").textContent = student.email;
+    document.getElementById("profilePhone").textContent = student.phone;
+    document.getElementById("profileDob").textContent = student.dob;
+    document.getElementById("profileGender").textContent = student.gender;
+    document.getElementById("profileProgram").textContent = student.program;
+    document.getElementById("profileCampus").textContent = student.campus;
+    document.getElementById("profileAddress").textContent = student.address;
+    document.getElementById("academicProgram").textContent = student.program;
+    document.getElementById("academicCampus").textContent = student.campus;
+
+}
+
+function logout() {
+
+    localStorage.removeItem("isLoggedIn");
+    window.location.href = "login.html";
+
+}
+
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+
+if (menuToggle && navLinks) {
+
+    menuToggle.addEventListener("click", function () {
+
+        navLinks.classList.toggle("active");
+
+        const isOpen = navLinks.classList.contains("active");
+        menuToggle.setAttribute("aria-expanded", isOpen);
+
+    });
+
+}
+
+</script>
  
 </body> 
 </html>
