@@ -57,11 +57,14 @@ nav .login:hover{
 html {
     scroll-behavior: smooth;
 }
-.explore-button {   /* explore more button */
+.explore-button {
     display: inline-block;
-    padding: 8px 0;
+    padding: 4px 0px;
     color: rgb(250, 251, 251);
     text-decoration: none;
+    margin-top: -20px;
+    position: relative;
+    top: -15px;
 }
 #campuses{   /* 2 campuses section */ 
 padding:20px 30px;
