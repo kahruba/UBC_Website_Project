@@ -1984,3 +1984,82 @@ img{max-width:100%}
     }
 
 }
+
+
+
+/* ===== FIX MOBILE HEADER ===== */
+
+@media (max-width: 991.98px) {
+
+    header nav.navbar {
+        height: auto;
+        min-height: 75px;
+        padding: 8px 12px;
+        display: block;
+        background: white;
+    }
+
+    .navbar .container-fluid {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 8px;
+        padding: 0;
+        margin: 0;
+    }
+
+    .navbar-brand {
+        margin: 0;
+        padding: 0;
+        flex-shrink: 0;
+    }
+
+    .navbar-brand img {
+        width: 48px;
+        height: 48px;
+        object-fit: contain;
+    }
+
+    .navbar-title {
+        color: #04346c;
+        font-size: clamp(9px, 2.8vw, 13px);
+        font-weight: 700;
+        line-height: 1.2;
+        margin: 0;
+        flex: 1;
+        min-width: 0;
+    }
+
+    .navbar-toggler {
+        flex-shrink: 0;
+        padding: 5px 9px;
+        margin: 0;
+    }
+
+    .navbar-collapse {
+        flex-basis: 100%;
+        margin: 0;
+    }
+
+    .navbar-links {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        margin: 0;
+        padding: 10px 0;
+    }
+
+    .navbar-links a {
+        display: block;
+        margin: 0;
+        padding: 12px;
+        font-size: 15px;
+        border-bottom: 1px solid #eee;
+    }
+
+    .navbar-links .login {
+        text-align: center;
+        margin-top: 10px;
+    }
+}
