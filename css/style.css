@@ -1989,32 +1989,33 @@ img{max-width:100%}
 
 
 
-/* ===== CORRECTED MOBILE HEADER ===== */
+/* ===== FINAL RESPONSIVE HEADER ===== */
 
 @media (max-width: 991.98px) {
 
     header nav.navbar {
-        display: block !important;
         height: auto !important;
-        min-height: 0 !important;
+        min-height: 0;
         padding: 8px 12px !important;
+        display: block !important;
         background: white;
     }
 
-    /* Logo, university name and hamburger in one row */
     header nav.navbar > .container-fluid {
-        width: 100% !important;
         display: flex !important;
-        flex-direction: row !important;
         flex-wrap: wrap !important;
+        flex-direction: row !important;
         align-items: center !important;
-        gap: 8px;
-        margin: 0 !important;
+        width: 100%;
         padding: 0 !important;
+        margin: 0 !important;
+        gap: 8px;
     }
 
+    /* Logo */
     header nav.navbar .navbar-brand {
-        flex: 0 0 48px !important;
+        display: block;
+        flex: 0 0 48px;
         margin: 0 !important;
         padding: 0 !important;
     }
@@ -2026,8 +2027,9 @@ img{max-width:100%}
         object-fit: contain;
     }
 
+    /* University Name */
     header nav.navbar .navbar-title {
-        flex: 1 1 0 !important;
+        flex: 1 1 0;
         min-width: 0;
         margin: 0 !important;
         padding: 0 !important;
@@ -2035,19 +2037,21 @@ img{max-width:100%}
         font-size: clamp(10px, 2.8vw, 14px) !important;
         font-weight: 700;
         line-height: 1.25;
-        text-align: left;
+        white-space: normal;
     }
 
+    /* Hamburger Button */
     header nav.navbar .navbar-toggler {
-        flex: 0 0 auto !important;
+        display: block;
+        flex: 0 0 auto;
         margin: 0 !important;
         padding: 6px 9px;
     }
 
-    /* Menu opens below the first row */
+    /* Collapsible Menu */
     header nav.navbar #mainNavbar {
-        flex: 0 0 100% !important;
-        width: 100% !important;
+        flex: 0 0 100%;
+        width: 100%;
         margin: 0 !important;
         padding: 0 !important;
     }
@@ -2064,8 +2068,10 @@ img{max-width:100%}
 
     header nav.navbar .navbar-links a {
         display: block;
+        width: 100%;
         margin: 0 !important;
         padding: 12px 10px;
+        color: #04346c;
         font-size: 15px;
         border-bottom: 1px solid #eee;
     }
@@ -2073,5 +2079,30 @@ img{max-width:100%}
     header nav.navbar .navbar-links .login {
         text-align: center;
         margin-top: 10px !important;
+    }
+}
+
+/* Small Mobile */
+@media (max-width: 380px) {
+
+    header nav.navbar {
+        padding: 8px !important;
+    }
+
+    header nav.navbar .navbar-brand {
+        flex-basis: 42px;
+    }
+
+    header nav.navbar .navbar-brand img {
+        width: 42px !important;
+        height: 42px !important;
+    }
+
+    header nav.navbar .navbar-title {
+        font-size: 10px !important;
+    }
+
+    header nav.navbar .navbar-toggler {
+        padding: 5px 7px;
     }
 }
