@@ -1987,79 +1987,85 @@ img{max-width:100%}
 
 
 
-/* ===== FIX MOBILE HEADER ===== */
+
+/* ===== FINAL MOBILE HEADER FIX ===== */
 
 @media (max-width: 991.98px) {
 
     header nav.navbar {
-        height: auto;
-        min-height: 75px;
-        padding: 8px 12px;
-        display: block;
+        display: block !important;
+        height: auto !important;
+        min-height: 68px;
+        padding: 8px 12px !important;
         background: white;
     }
 
-    .navbar .container-fluid {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
+    header nav.navbar .container-fluid {
+        width: 100% !important;
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        align-items: center !important;
         gap: 8px;
-        padding: 0;
-        margin: 0;
+        padding: 0 !important;
+        margin: 0 !important;
     }
 
-    .navbar-brand {
-        margin: 0;
-        padding: 0;
-        flex-shrink: 0;
+    header .navbar-brand {
+        flex: 0 0 auto;
+        margin: 0 !important;
+        padding: 0 !important;
     }
 
-    .navbar-brand img {
-        width: 48px;
-        height: 48px;
+    header .navbar-brand img {
+        width: 45px !important;
+        height: 45px !important;
         object-fit: contain;
     }
 
-    .navbar-title {
-        color: #04346c;
-        font-size: clamp(9px, 2.8vw, 13px);
-        font-weight: 700;
-        line-height: 1.2;
-        margin: 0;
-        flex: 1;
+    header .navbar-title {
+        flex: 1 1 auto !important;
         min-width: 0;
+        margin: 0 !important;
+        padding: 0 !important;
+        color: #04346c;
+        font-size: clamp(9px, 2.8vw, 12px) !important;
+        line-height: 1.2;
+        font-weight: 700;
+        text-align: left;
     }
 
-    .navbar-toggler {
-        flex-shrink: 0;
-        padding: 5px 9px;
-        margin: 0;
+    header .navbar-toggler {
+        flex: 0 0 auto;
+        margin: 0 !important;
+        padding: 5px 8px;
     }
 
-    .navbar-collapse {
-        flex-basis: 100%;
-        margin: 0;
+    header .navbar-collapse {
+        flex-basis: 100% !important;
+        width: 100% !important;
+        margin: 0 !important;
     }
 
-    .navbar-links {
-        display: flex;
-        flex-direction: column;
-        align-items: stretch;
-        gap: 0;
-        margin: 0;
+    header .navbar-links {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: stretch !important;
+        width: 100% !important;
+        margin: 0 !important;
         padding: 10px 0;
+        gap: 0;
     }
 
-    .navbar-links a {
+    header .navbar-links a {
         display: block;
-        margin: 0;
+        margin: 0 !important;
         padding: 12px;
         font-size: 15px;
         border-bottom: 1px solid #eee;
     }
 
-    .navbar-links .login {
+    header .navbar-links .login {
         text-align: center;
-        margin-top: 10px;
+        margin-top: 10px !important;
     }
 }
